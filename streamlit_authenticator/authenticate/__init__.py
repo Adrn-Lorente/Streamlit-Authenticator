@@ -359,7 +359,7 @@ class Authenticate:
                                                   else fields['Reset']):
             if self.authentication_handler.reset_password(username, password, new_password,
                                                           new_password_repeat):
-                return True
+                return new_password
         return None
     def update_user_details(self, username: str, location: str='main', fields: dict=None,
                             clear_on_submit: bool=False) -> bool:
